@@ -17,5 +17,4 @@ Input data requirements:
 (6) the PS and S2 images should be geometrically matched. 
 
 References:
-
 Yongquan Zhao, Desheng Liu. 2022. A robust and adaptive spatial-spectral fusion model for PlanetScope and Sentinel-2 imagery. GIScience & Remote Sensing, 59(1), 520-546. doi: 10.1080/15481603.2022.2036054
