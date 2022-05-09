@@ -1,7 +1,7 @@
 # RASSFM_MATLAB
 This is the MATLAB source code package of the Robust and Adaptive Spatial-Spectral image Fusion Model (RASSFM). It aims to blend the four PlanetScope (PS) 3m bands (Blue, Green, Red, NIR) and the ten Sentinel-2 (S2) 10m&20m bands (Blue, Green, Red, RE1, RE2, RE3, NIR, SWIR1, SWIR2) to generate the synthetic ten 3m bands.
 
-Version 1.0: May 04, 2022.
+Version 1.0: May 09, 2022.
 
 Inputs from RASSFM_Path.txt:
 (1) fname_PS:  The file name of the input PS image;
