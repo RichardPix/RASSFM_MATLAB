@@ -6,6 +6,7 @@ Version 1.0: May 09, 2022.
 Inputs from RASSFM_Path.txt:
 ===================================================================================================================================================================
 (1) fname_PS:  The file name of the input PS image;
+
 (2) fname_S2: The file name of the input S2 image;
 
 (3) fname_fusion: The file name of the fusion result image.
