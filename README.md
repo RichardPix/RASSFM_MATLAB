@@ -24,7 +24,6 @@ Input data requirements:
 (5) the PS and S2 images should have the same geographic coverage and projection (e.g., UTM); 
 
 (6) the PS and S2 images should be geometrically matched. 
-
 ===================================================================================================================================================================
 References:
 
