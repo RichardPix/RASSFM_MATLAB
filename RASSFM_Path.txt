@@ -1,0 +1,4 @@
+.\test_data\PS_data_3m
+.\test_data\S2_data_10m
+.\test_data\S2_data_20m
+.\test_result\RASSFM_result
