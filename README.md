@@ -4,9 +4,9 @@ This the MATLAB source code of the Robust and Adaptive Spatial-Spectral image Fu
 Version 1.0: May 04, 2022.
 
 Inputs from RASSFM_Path.txt:
-fname_PS:  The file name of the input PS image.
-fname_S2: The file name of the input S2 image.
-fname_fusion: The file name of the fusion result image.
+(1) fname_PS:  The file name of the input PS image.
+(2) fname_S2: The file name of the input S2 image.
+(3) fname_fusion: The file name of the fusion result image.
 
 Input data requirements:
 (1) the 3m PS bands are stacked in the order of: Blue, Green, Red, NIR;
