@@ -33,6 +33,6 @@ Yongquan Zhao, Desheng Liu. 2022. A robust and adaptive spatial-spectral fusion 
 
 Copyright and License
 ===================================================================================================================================================================
-Copyright (c) 2022–2025 Yongquan Zhao, yqzhao@niglas.ac.cn, Ningjing Institute of Geography and Limnology, Chinese Academy of Sciences (NIGLAS).
+Copyright (c) 2022–2023 Yongquan Zhao, yqzhao@niglas.ac.cn, Ningjing Institute of Geography and Limnology, Chinese Academy of Sciences (NIGLAS).
 
 This repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license.
