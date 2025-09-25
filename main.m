@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source code of the Robust and Adaptive Spatial-Spectral image Fusion Model (RASSFM) - Yongquan Zhao, The Ohio State University, Columbus.
-% Code summary: this code package is for blending the four PlanetScope (PS) 3m bands (Blue, Green, Red, NIR)
-% and the ten Sentinel-2 (S2) 10m&20m bands (Blue, Green, Red, RE1, RE2, RE3, NIR, SWIR1, SWIR2) to generate the synthetic ten 3m bands.
+% Code summary: this code package is for blending the four PlanetScope (PS) 3-m bands (Blue, Green, Red, NIR)
+% and the ten Sentinel-2 (S2) 10-m&20-m bands (Blue, Green, Red, RE1, RE2, RE3, NIR, NNIR, SWIR1, SWIR2) to generate the synthetic ten 3-m bands.
 % 
 % Version 1.0: April 22, 2023.
 % 
@@ -11,13 +11,14 @@
 % 
 % Inputs from RASSFM_Path.txt:
 % (1) fname_PS:  The file name of the input PS image;
-% (2) fname_S2: The file name of the input S2 image;
-% (3) fname_fusion: The file name of the fusion result image.
+% (2) fname_S2_10m: The file name of the input S2 10-m bands (Blue, Green, Red, NIR);
+% (3) fname_S2_20m: The file name of the input S2 20-m bands (RE1, RE2, RE3, NNIR, SWIR1, SWIR2);
+% (4) fname_fusion: The file name of the fusion result image.
 % 
 % Input data requirements:
-% (1) the 3m PS bands are stacked in the order of: Blue, Green, Red, NIR;
-% (2) the 10m S2 bands are stacked in the order of: Blue, Green, Red, NIR;
-% (3) the 20m S2 bands are stacked in the order of: RE1, RE2, RE3, NNIR, SWIR1, SWIR2;
+% (1) the 3-m PS bands are stacked in the order of: Blue, Green, Red, NIR;
+% (2) the 10-m S2 bands are stacked in the order of: Blue, Green, Red, NIR;
+% (3) the 20-m S2 bands are stacked in the order of: RE1, RE2, RE3, NNIR, SWIR1, SWIR2;
 % (4) the surface reflectance value ranges of PS and S2 images are 0 - 10000;
 % (5) the PS and S2 images should have the same geographic coverage and projection (e.g., UTM); 
 % (6) the PS and S2 images should be geometrically matched. 
@@ -141,3 +142,4 @@ fprintf('Spatial-spectral fusion completed. \n');
 % Write fused image.
 rs_imwrite_bands(single(FusionImg), fname_fusion, info, FusionBandName, fillV); % Save results as single to save storage.
 fprintf('Fusion result saved. Done! \n');
+
