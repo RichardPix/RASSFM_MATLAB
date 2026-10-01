@@ -92,7 +92,6 @@ H_20m = H_3m*3/20; W_20m = W_3m*3/20;
 Img_S2 = zeros(H_3m, W_3m, BandNum_S2);
 Img_S2(:,:,[1:3,7]) = imresize(Img_S2_10m, [H_3m W_3m], 'bicubic'); 
 Img_S2(:,:,[4:6,8:10]) = imresize(Img_S2_20m, [H_3m W_3m], 'bicubic'); 
-clear Img_S2_10m Img_S2_20m
 
 fprintf('Fusion started. \n');
 
@@ -101,15 +100,8 @@ fprintf('Fusion started. \n');
 % Spectral transformation with 3m PS.
 % Sim_3m_Map = SpecMap( Img_S2, Img_PS ); 
 % Spectral transformation with 10m and 20m PS for the four 10m and six 20m S2 bands, respectively.
-Img_PS_10m = imresize(Img_PS, [H_10m W_10m], 'box'); 
-Img_PS_10T3m = imresize(Img_PS_10m, [H_3m W_3m], 'bicubic');
-Img_PS_20m = imresize(Img_PS, [H_20m W_20m], 'box'); 
-Img_PS_20T3m = imresize(Img_PS_20m, [H_3m W_3m], 'bicubic');
-clear Img_PS_10m Img_PS_20m
-Sim_3m_Map = zeros(H_3m, W_3m, BandNum_S2);
-Sim_3m_Map(:,:,[1:3,7]) = SpecMap( Img_S2(:,:,[1:3,7]), Img_PS_10T3m ); 
-Sim_3m_Map(:,:,[4:6,8:10]) = SpecMap( Img_S2(:,:,[4:6,8:10]), Img_PS_20T3m ); 
-clear Img_PS_10T3m Img_PS_20T3m
+Sim_3m_Map = SpecTrans_PS_S2( Img_S2_10m, Img_S2_20m, Img_PS );
+clear Img_S2_10m Img_S2_20m
 fprintf('Spectral mapping completed. \n');
 
 %%%%%% Spectral correlation between PS and S2.
